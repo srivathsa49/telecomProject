@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: com.telecomProject.CDR.serializer.CDRSerializer
+    retries: 3
+    retry-backoff-ms: 1000
+    batch-size: 100
+    linger-ms: 1000
+  application:
+    name: CDR-Producer
