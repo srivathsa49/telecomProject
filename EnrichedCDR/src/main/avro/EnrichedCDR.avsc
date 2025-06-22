@@ -1,0 +1,76 @@
+{
+  "type": "record",
+  "name": "EnrichedCDR",
+  "namespace": "com.telecomProject.CDR.EnrichedCDR.entity",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "caller",
+      "type": "long"
+    },
+    {
+      "name": "receiver",
+      "type": "long"
+    },
+    {
+      "name": "callDuration",
+      "type": "int"
+    },
+    {
+      "name": "callDate",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "callType",
+      "type": "string"
+    },
+    {
+      "name": "ip",
+      "type": "string"
+    },
+    {
+      "name": "custPlan",
+      "type": "string"
+    },
+    {
+      "name": "countryCode",
+      "type": "string"
+    },
+
+    {
+      "name": "countryName",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "zipCode",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    }
+
+  ]
+}
