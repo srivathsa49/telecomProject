@@ -4,6 +4,10 @@
   "namespace": "com.telecomProject.CDR.EnrichedCDR.entity",
   "fields": [
     {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
       "name": "firstName",
       "type": "string"
     },
@@ -13,11 +17,11 @@
     },
     {
       "name": "caller",
-      "type": "long"
+      "type": "string"
     },
     {
       "name": "receiver",
-      "type": "long"
+      "type": "string"
     },
     {
       "name": "callDuration",
@@ -53,15 +57,18 @@
     },
     {
       "name": "state",
-      "type": "string"
+      "type": "string",
+      "default": "AP"
     },
     {
       "name": "city",
-      "type": "string"
+      "type": "string",
+      "default": "KNL"
     },
     {
       "name": "zipCode",
-      "type": "string"
+      "type": "string",
+      "default": "518005"
     },
     {
       "name": "address",

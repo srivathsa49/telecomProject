@@ -15,8 +15,8 @@ public class CDRConsumer {
     @Autowired
     private EnrichedCDRProducer enrichedCDRProducer;
 
-    @KafkaListener(topics = "cdr-topic")
-    public void consume(@Header(KafkaHeaders.RECEIVED_KEY) Long caller, @Payload CDR cdr){
+    @KafkaListener(topics = "cdr.topic")
+    public void consume(@Header(KafkaHeaders.RECEIVED_KEY) String caller, @Payload CDR cdr){
         log.info("Received Caller: {}, and CDR: {}", caller,cdr);
         enrichedCDRProducer.produce(cdr);
     }

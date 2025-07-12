@@ -9,15 +9,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class CDRProducer {
     private static final Logger log = LoggerFactory.getLogger(CDRProducer.class);
-    private final KafkaTemplate<Long, CDR> kafkaTemplate;
+    private final KafkaTemplate<String,CDR> kafkaTemplate;
 
-    public CDRProducer(KafkaTemplate<Long, CDR> kafkaTemplate) {
+    public CDRProducer(KafkaTemplate<String, CDR> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
     public void produceCDR(CDR cdr) {
         log.trace("before sending message {}",cdr.caller());
-        kafkaTemplate.send("cdr-topic", cdr.caller(),cdr);
+        kafkaTemplate.send("cdr.topic", cdr.caller(),cdr);
         log.trace("after sending message {}",cdr.caller());
     }
 }
