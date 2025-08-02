@@ -1,4 +1,4 @@
-# 📡 Telecom Billing System
+# 📡 Telecom Billing System (In Progress)
 
 > 🚧 **This project is currently under active development.**  
 > All services are being built and tested iteratively by the contributors.
